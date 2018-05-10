@@ -1,0 +1,58 @@
+## -*- Mode: python; py-indent-offset: 4; indent-tabs-mode: nil; coding: utf-8; -*-
+
+def build(bld):
+    obj = bld.create_ns3_program('dumbbell-animation',
+                                 ['netanim', 'applications', 'ethernet', 'point-to-point-layout'])
+    obj.source = 'dumbbell-animation.cc'
+
+    obj = bld.create_ns3_program('grid-animation',
+                                 ['netanim', 'applications', 'point-to-point-layout', 'ethernet', 'internet'])
+    obj.source = 'grid-animation.cc'
+
+    obj = bld.create_ns3_program('star-animation',
+                                 ['netanim', 'applications', 'point-to-point-layout'])
+    obj.source = 'star-animation.cc'
+
+    obj = bld.create_ns3_program('wireless-animation',
+                                 ['netanim', 'applications', 'point-to-point', 'csma', 'ethernet', 'wifi', 'mobility', 'network'])
+    obj.source = 'wireless-animation.cc'
+    
+    obj = bld.create_ns3_program('uan-animation',
+                                 ['netanim', 'internet', 'mobility', 'applications', 'uan'])
+    obj.source = 'uan-animation.cc'
+
+    obj = bld.create_ns3_program('colors-link-description',
+                                 ['netanim', 'applications', 'point-to-point-layout'])
+    obj.source = 'colors-link-description.cc'
+
+    obj = bld.create_ns3_program('resources-counters',
+                                 ['netanim', 'applications', 'point-to-point-layout'])
+    obj.source = 'resources-counters.cc'
+
+    obj = bld.create_ns3_program('olsr-wifi',
+                                 ['netanim', 'applications', 'wifi', 'mobility', 'network', 'olsr', 'ethernet', 'aggregator'])
+    obj.source = 'olsr-wifi.cc'
+
+    obj = bld.create_ns3_program('olsr-big-box',
+                                 ['netanim', 'applications', 'wifi', 'mobility', 'network', 'olsr', 'ethernet', 'aggregator'])
+    obj.source = 'olsr-big-box.cc'
+    
+    obj = bld.create_ns3_program('aodv-big-box',
+                                 ['netanim', 'applications', 'wifi', 'mobility', 'network', 'aodv', 'ethernet', 'aggregator'])
+    obj.source = 'aodv-big-box.cc'
+
+    obj = bld.create_ns3_program('batman-big-box',
+                                 ['netanim', 'applications', 'wifi', 'mobility', 'network', 'batmand', 'ethernet', 'aggregator'])
+    obj.source = 'batman-big-box.cc'
+    
+    obj = bld.create_ns3_program('batman-wifi',
+                                 ['netanim', 'applications', 'wifi', 'mobility', 'network', 'batmand', 'ethernet', 'aggregator'])
+    obj.source = 'batman-wifi.cc'
+    
+    obj = bld.create_ns3_program('complex-olsr',
+                                 ['netanim', 'applications', 'wifi', 'mobility', 'network', 'olsr', 'ethernet', 'aggregator'])
+    obj.source = 'complex-olsr.cc'
+    
+    obj = bld.create_ns3_program('complex-batman',
+                                 ['netanim', 'applications', 'wifi', 'mobility', 'network', 'batmand', 'ethernet', 'aggregator'])
+    obj.source = 'complex-batman.cc'
