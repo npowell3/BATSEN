@@ -1,0 +1,6 @@
+This file contains the source code and design documentation supporting the BATMAN for Sensor Networks (or BATSEN) research project as written by Nelson H. Powell III for the MS in Computing Security and Information Assurance, at Rochester Institute of Technology, Rochester NY; under the guidance of Dr. Sumita Mishra.  This code is free to use for the purposes of research and improving the field of study.
+
+The thesis entitle "BATSEN: Modifying the BATMAN Routing Protocol for Wireless Sensor Networks" is composed of two major research topics:
+
+1) Compare OLSR and BATMAN to confirm contemporary findings
+2) Comapre LEACH and the BATSEN protocols for energy efficiency
