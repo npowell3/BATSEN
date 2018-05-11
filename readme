@@ -1,6 +1,25 @@
-This file contains the source code and design documentation supporting the BATMAN for Sensor Networks (or BATSEN) research project as written by Nelson H. Powell III for the MS in Computing Security and Information Assurance, at Rochester Institute of Technology, Rochester NY; under the guidance of Dr. Sumita Mishra.  This code is free to use for the purposes of research and improving the field of study.
+This file contains the source code and design documentation supporting the BATMAN for Sensor Networks (or BATSEN) research project as written by Nelson H. Powell III for the MS in Computing Security and Information Assurance, at Rochester Institute of Technology, Rochester NY; under the guidance of Dr. Sumita Mishra.  This code is free to use for the purposes of research and improving the field of study of networking.
 
 The thesis entitle "BATSEN: Modifying the BATMAN Routing Protocol for Wireless Sensor Networks" is composed of two major research topics:
 
 1) Compare OLSR and BATMAN to confirm contemporary findings
 2) Comapre LEACH and the BATSEN protocols for energy efficiency
+
+The repository SOURCE folder contains all working files for both portions of the project and the scratch folder holding the scripts for various tests. The modules work with the ns-3 simulator (https://www.nsnam.org/ns-3-25/).  It was built and tested for both Ubuntu 16.04 and Mac OSX 10.11.6.  I've also had it work with ns-3-26, but have not updated NS-3 since.
+
+In order to install and execute the various modules, follow the instructions for downloading and installing the NS-3 simulator; use the code from https://www.nsnam.org/release/ns-allinone-3.25.tar.bz2. Once installed, go to the ns-3-dev/src directory and create the following directories:
+
+    cd $NS3_PATH/ns-3-dev/src
+    ./create_module.py aggregator
+    ./create_module.py batmand
+    ./create_module.py sensor
+
+After the module folders are created, delete the contents of each folder, then copy the contents of the associated folders from this project into the new module folders.  Ensure that you execute the configuration script.
+
+    cd ..
+    ./waf configure --enable-examples --enable-tests
+    
+AGGREGATOR
+Folder:      Source/Routing/Aggregator
+Description: This module is used to attach callback connections to aggregate 
+
