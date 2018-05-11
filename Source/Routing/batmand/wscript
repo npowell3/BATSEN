@@ -1,0 +1,33 @@
+# -*- Mode: python; py-indent-offset: 4; indent-tabs-mode: nil; coding: utf-8; -*-
+
+def build(bld):
+    module = bld.create_ns3_module('batmand', ['core', 'internet'])
+    module.includes = '.'
+    module.source = [
+        'model/batmand-routing-protocol.cc',
+        'model/batmand-structures.cc',
+        'model/batmand-header.cc',
+        'model/batmand-hash.cc',
+        'model/batmand-hna.cc',
+        'helper/batmand-helper.cc',
+        ]
+
+    module_test = bld.create_ns3_module_test_library('batmand')
+    module_test.source = [
+        'test/batmand-test-suite.cc',
+        ]
+
+    headers = bld(features='ns3header')
+    headers.module = 'batmand'
+    headers.source = [
+        'model/batmand-routing-protocol.h',
+        'model/batmand-structures.h',
+        'model/batmand-header.h',
+        'helper/batmand-helper.h',
+        ]
+
+    if bld.env.ENABLE_EXAMPLES:
+        bld.recurse('examples')
+
+    # bld.ns3_python_bindings()
+
